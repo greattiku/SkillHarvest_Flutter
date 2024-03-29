@@ -7,4 +7,7 @@ class AppImage {
   static const String faceBook = 'assets/image/svgs/Facebook.svg';
   static const String google = 'assets/image/svgs/Google.svg';
   static const String successMarkIcon = 'assets/image/svgs/SuccessMarkIcon.svg';
+  static const String manAvatar = 'assets/image/svgs/ManAvatar.svg';
+  static const String hand= 'assets/image/svgs/hand.svg';
+  static const String wonanAvatar = 'assets/image/svgs/WomanAvatar.svg';
 }

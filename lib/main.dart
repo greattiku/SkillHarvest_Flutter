@@ -1,13 +1,6 @@
 
+import 'package:app_skill_harvest/learning_plan.dart';
 // import 'package:app_skill_harvest/splash_screen_task.dart';
-//import 'package:app_skill_harvest/splash_screen_task.dart';
-//import 'package:app_skill_harvest/study_plan.dart';
-//import 'package:app_skill_harvest/phone_number_screen.dart';
-
-// import 'package:app_skill_harvest/LoginPage.dart';
-//import 'package:app_skill_harvest/sign_up_page.dart';
-import 'package:app_skill_harvest/splash_screen_task.dart';
-//import 'package:app_skill_harvest/splash_screen_task.dart';
 import 'package:flutter/material.dart';
 
 // import 'sign_up_page.dart';
@@ -31,7 +24,7 @@ class ChristTech extends StatelessWidget {
         secondary: const Color.fromARGB(243, 6, 29, 232)),
         useMaterial3: true,
       ),
-      home:  const SplashScreenTask() //const SplashScreenTask(),
+      home:  const LearningPlan() //const SplashScreenTask(),
     );
   }
 }
