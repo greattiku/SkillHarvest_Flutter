@@ -1,27 +1,28 @@
+//import 'package:app_skill_harvest/core/util/app_image.dart';
 import 'package:app_skill_harvest/core/util/app_image.dart';
 import 'package:app_skill_harvest/progress_plan.dart';
-// import 'package:app_skill_harvest/progress_plan.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 class LearningPlan extends StatelessWidget {
-  LearningPlan({super.key,
-  // required this.progressBar,
-  
+  const LearningPlan({
+    super.key,
+    // required this.title,
+    // required this.totalVideos,
+    // required this.coveredVideos,
   });
 
-  
-
-  
-  
+  // final String? title;
+  // final int totalVideos;
+  // final int coveredVideos;
 
   @override
   Widget build(BuildContext context) {
     
+
     final double screenWidth = MediaQuery.of(context).size.width;
     // final double screenHeight = MediaQuery.of(context).size.width;
 
@@ -44,15 +45,76 @@ class LearningPlan extends StatelessWidget {
           ),
         ),
         const Padding(
-          padding: EdgeInsets.only(left: 15,top:10),
-          child: Text("Learning Plan", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+          padding: EdgeInsets.only(left: 15, top: 10),
+          child: Text(
+            "Learning Plan",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+          ),
         ),
+       const CircularProgressPlan(
+        title: "packaging Design",
+                totalVideos: 48,
+                coveredVideos: 48,
+      ),
 
-         
- 
-          
-       
+      
+         const CircularProgressPlan(
+                    title: "Product Design",
+                totalVideos: 48,
+                coveredVideos: 48),
+           const CircularProgressPlan(
+                    title: "Marketing",
+                totalVideos: 19,
+                coveredVideos: 24),
+            
 
+        // Container(
+        //   margin: const EdgeInsets.only(left: 10,right: 10,top:10),
+        //   width: 350,
+        //   height: 100,
+
+        //   decoration: BoxDecoration(
+        //     boxShadow:[
+        //   BoxShadow(color: Colors.grey.withOpacity(0.3),
+        //         spreadRadius: 1,
+        //         blurRadius: 5,
+        //         offset: const Offset(0, 3)),
+        //         const BoxShadow(
+        //         color: Colors.transparent,
+        //         spreadRadius: 1,
+        //         blurRadius: 5,
+        //         offset: Offset(0, 3)), ],
+        //     color: const Color(0xFFEFE0FF),
+        //     borderRadius: BorderRadius.circular(15), ),
+        //     child:   Column(
+        //     //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       children: [
+
+        //         Padding(
+        //           padding: const EdgeInsets.only(left: 25,top: 25),
+        //           child: Row(
+        //            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //             children: [
+        //               SvgPicture.asset(AppImage.womanAvatar,height: 50,),
+        //               const Text("Courses",
+        //               style: TextStyle(
+        //                 color: Color(0xFF440687),
+        //                 fontWeight: FontWeight.bold,fontSize: 20),),
+
+        //             ],
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: EdgeInsets.only(left: 10),
+        //           child: Text("Off-line exchange of learning experiences",
+        //           style: TextStyle(color: Color(0xFF440687),),),
+        //         ),
+
+        //       ],
+        //     ),
+
+        // ),
       ]),
     );
   }
@@ -81,7 +143,10 @@ class WelcomeStack extends StatelessWidget {
               width: screenWidth,
               height: 180,
               child: Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15,),
+                padding: const EdgeInsets.only(
+                  left: 15,
+                  right: 15,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -119,7 +184,10 @@ class WelcomeStack extends StatelessWidget {
           right: 20,
           // bottom: 5.0,
           child: Container(
-            margin: const EdgeInsets.only(bottom: 0,top: 5,),
+            margin: const EdgeInsets.only(
+              bottom: 0,
+              top: 5,
+            ),
             //padding: const EdgeInsets.only(bottom:40, left: 10, right: 10),
             height: 90,
             width: 50,
@@ -200,8 +268,12 @@ class PlaceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 10,),
-      padding: const EdgeInsets.only(left: 20,),
+      margin: const EdgeInsets.only(
+        left: 10,
+      ),
+      padding: const EdgeInsets.only(
+        left: 20,
+      ),
       height: 120,
       width: 300,
       decoration: const BoxDecoration(
@@ -241,7 +313,7 @@ class PlaceCard extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.bold),
-    
+
                     //   child: Text("Get Started",
                     //   style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),))
                     // ],

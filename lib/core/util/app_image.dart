@@ -9,5 +9,5 @@ class AppImage {
   static const String successMarkIcon = 'assets/image/svgs/SuccessMarkIcon.svg';
   static const String manAvatar = 'assets/image/svgs/ManAvatar.svg';
   static const String hand= 'assets/image/svgs/hand.svg';
-  static const String wonanAvatar = 'assets/image/svgs/WomanAvatar.svg';
+  static const String womanAvatar = 'assets/image/svgs/WomanAvatar.svg';
 }
