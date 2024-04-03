@@ -1,6 +1,6 @@
 //import 'package:app_skill_harvest/core/util/app_image.dart';
 import 'package:app_skill_harvest/core/util/app_image.dart';
-import 'package:app_skill_harvest/sign_up_page.dart';
+import 'package:app_skill_harvest/authentication/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

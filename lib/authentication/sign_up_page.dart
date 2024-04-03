@@ -1,7 +1,7 @@
+import 'package:app_skill_harvest/authentication/login_page.dart';
 import 'package:app_skill_harvest/constant.dart';
 import 'package:app_skill_harvest/core/helper.dart';
-import 'package:app_skill_harvest/login_Page.dart';
-import 'package:app_skill_harvest/phone_number_screen.dart';
+import 'package:app_skill_harvest/authentication/phone_number_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:gap/gap.dart';

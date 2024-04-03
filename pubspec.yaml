@@ -19,6 +19,7 @@ dependencies:
   gap: ^3.0.1
   flutter_riverpod: ^2.3.0
   animated_text_kit: ^4.2.2
+  syncfusion_flutter_sliders: ^25.1.38
 
 
 dev_dependencies:

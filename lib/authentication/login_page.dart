@@ -1,6 +1,7 @@
 import 'package:app_skill_harvest/constant.dart';
 import 'package:app_skill_harvest/core/util/app_image.dart';
-import 'package:app_skill_harvest/sign_up_page.dart';
+import 'package:app_skill_harvest/learning_plan.dart';
+import 'package:app_skill_harvest/authentication/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -24,9 +25,9 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void onTap() {
-    // Navigator.of(context).push(
-    //   MaterialPageRoute(
-    //     builder: (context) => const SuccessScren()));
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const LearningPlan()));
   }
 
   @override

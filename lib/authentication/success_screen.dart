@@ -1,3 +1,4 @@
+import 'package:app_skill_harvest/authentication/login_page.dart';
 import 'package:app_skill_harvest/core/util/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -47,7 +48,11 @@ class SuccessDailog extends StatelessWidget {
             ),
             const Gap(20),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const LoginPage()));
+                },
                 style: ElevatedButton.styleFrom(
                     elevation: 5,
                     minimumSize: const Size(250, 40),

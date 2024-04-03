@@ -1,8 +1,10 @@
-//import 'package:app_skill_harvest/core/util/app_image.dart';
+
+import 'package:app_skill_harvest/Course/courses.dart';
 import 'package:app_skill_harvest/core/util/app_image.dart';
 import 'package:app_skill_harvest/progress_plan.dart';
 
 import 'package:flutter/material.dart';
+
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -10,14 +12,10 @@ import 'package:gap/gap.dart';
 class LearningPlan extends StatelessWidget {
   const LearningPlan({
     super.key,
-    // required this.title,
-    // required this.totalVideos,
-    // required this.coveredVideos,
+    
   });
 
-  // final String? title;
-  // final int totalVideos;
-  // final int coveredVideos;
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,70 +49,105 @@ class LearningPlan extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
           ),
         ),
-       const CircularProgressPlan(
-        title: "packaging Design",
-                totalVideos: 48,
-                coveredVideos: 48,
-      ),
-
+       Container(
+        margin: const EdgeInsets.only(left: 15,right: 15),
+        padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+      width: screenWidth,
+      height: 120,
       
-         const CircularProgressPlan(
-                    title: "Product Design",
-                totalVideos: 48,
-                coveredVideos: 48),
-           const CircularProgressPlan(
-                    title: "Marketing",
-                totalVideos: 19,
-                coveredVideos: 24),
+      decoration:  BoxDecoration(
+      //  border: const Border(bottom: BorderSide(width:2.0)),
+        boxShadow:[
+            BoxShadow(color: Colors.grey.withOpacity(0.3),
+                  spreadRadius: 1,
+                  blurRadius: 5,
+                  offset: const Offset(0, 3)),
+                  const BoxShadow(
+                  color: Colors.transparent,
+                  spreadRadius: 1,
+                  blurRadius: 5,
+                  offset: Offset(0, 3)), ],
+        color: Colors.white,borderRadius: const BorderRadius.all(Radius.circular(15))),
+         child: const Column(
+           children: [
+             CircularProgressPlan(
+              title: "Packaging Design",
+                      totalVideos: 48,
+                      coveredVideos: 30,
+                   ),
+             
+                   Gap(15),
+               CircularProgressPlan(
+                title: "Product Design",
+                      totalVideos: 48,
+                      coveredVideos: 20                                                 
+               ),
+                      Gap(15),
+                 CircularProgressPlan(
+                          title: "Marketing",
+                      totalVideos: 24,
+                      coveredVideos: 19),
+           ],
+         ),
+       ),
             
 
-        // Container(
-        //   margin: const EdgeInsets.only(left: 10,right: 10,top:10),
-        //   width: 350,
-        //   height: 100,
-
-        //   decoration: BoxDecoration(
-        //     boxShadow:[
-        //   BoxShadow(color: Colors.grey.withOpacity(0.3),
-        //         spreadRadius: 1,
-        //         blurRadius: 5,
-        //         offset: const Offset(0, 3)),
-        //         const BoxShadow(
-        //         color: Colors.transparent,
-        //         spreadRadius: 1,
-        //         blurRadius: 5,
-        //         offset: Offset(0, 3)), ],
-        //     color: const Color(0xFFEFE0FF),
-        //     borderRadius: BorderRadius.circular(15), ),
-        //     child:   Column(
-        //     //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //       crossAxisAlignment: CrossAxisAlignment.start,
-        //       children: [
-
-        //         Padding(
-        //           padding: const EdgeInsets.only(left: 25,top: 25),
-        //           child: Row(
-        //            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //             children: [
-        //               SvgPicture.asset(AppImage.womanAvatar,height: 50,),
-        //               const Text("Courses",
-        //               style: TextStyle(
-        //                 color: Color(0xFF440687),
-        //                 fontWeight: FontWeight.bold,fontSize: 20),),
-
-        //             ],
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: EdgeInsets.only(left: 10),
-        //           child: Text("Off-line exchange of learning experiences",
-        //           style: TextStyle(color: Color(0xFF440687),),),
-        //         ),
-
-        //       ],
-        //     ),
-
-        // ),
+        GestureDetector(onTap: (){
+           Navigator.of(context).push(
+         MaterialPageRoute(
+            builder: (context) => const Courses()));
+        },
+          child: Container(
+            margin: const EdgeInsets.only(left: 10,right: 10,top:10),
+            width: 350,
+            height: 100,
+          
+            decoration: BoxDecoration(
+              boxShadow:[
+            BoxShadow(color: Colors.grey.withOpacity(0.3),
+                  spreadRadius: 1,
+                  blurRadius: 5,
+                  offset: const Offset(0, 3)),
+                  const BoxShadow(
+                  color: Colors.transparent,
+                  spreadRadius: 1,
+                  blurRadius: 5,
+                  offset: Offset(0, 3)), ],
+              color: const Color(0xFFEFE0FF),
+              borderRadius: BorderRadius.circular(15), ),
+              child:   Column(
+              //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+          
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25,top: 2),
+                    child: Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        
+                        const Text("Courses",
+                        style: TextStyle(
+                          color: Color(0xFF440687),
+                          fontWeight: FontWeight.bold,fontSize: 20),),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10,top: 10),
+                          child: SvgPicture.asset(AppImage.womanAvatar,height: 50,),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text("Off-line exchange of learning experiences",
+                    style: TextStyle(color: Color(0xFF440687),),),
+                  ),
+          
+                ],
+              ),
+          
+          ),
+        ),
       ]),
     );
   }

@@ -10,4 +10,8 @@ class AppImage {
   static const String manAvatar = 'assets/image/svgs/ManAvatar.svg';
   static const String hand= 'assets/image/svgs/hand.svg';
   static const String womanAvatar = 'assets/image/svgs/WomanAvatar.svg';
+  static const String ladyHandsOnHead = 'assets/image/svgs/ladyhandsonhead.svg';
+  static const String ladyPainting = 'assets/image/svgs/ladypainting.svg';
+  static const String bestSellerHuman= 'assets/image/svgs/BestSellerHuman.svg';
+  static const String bestSellerTag = 'assets/image/svgs/BestSellerTag.svg';
 }
