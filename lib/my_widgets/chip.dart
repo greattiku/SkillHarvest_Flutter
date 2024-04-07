@@ -28,7 +28,8 @@ class _CourseFilterChipState extends State<CourseFilterChip> {
             label: Text(widget.text,
             style:  TextStyle(
               fontSize: 12,
-              color: isSelected1 ? Colors.white : const Color(0xFF858597)),),            
+              color: isSelected1 ? Colors.white : const Color(0xFF858597)),),
+             
             selected: isSelected1,
             checkmarkColor: Colors.white,
            selectedColor: const Color.fromARGB(255, 10, 10, 243),

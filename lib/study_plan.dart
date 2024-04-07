@@ -1,4 +1,5 @@
 //import 'package:app_skill_harvest/core/util/app_image.dart';
+import 'package:app_skill_harvest/authentication/login_page.dart';
 import 'package:app_skill_harvest/core/util/app_image.dart';
 import 'package:app_skill_harvest/authentication/sign_up_page.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +59,10 @@ class StudyPlan extends StatelessWidget {
               
               const  Gap(5),
             
-                OutlinedButton(onPressed: (){}, 
+                OutlinedButton(onPressed: (){
+                  Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const LoginPage()));
+                }, 
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(color: Colors.blue),
                   minimumSize: const Size(150, 50),

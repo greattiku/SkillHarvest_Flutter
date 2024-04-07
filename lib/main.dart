@@ -1,6 +1,11 @@
 
 
-import 'package:app_skill_harvest/splash_screen_task.dart';
+// import 'package:app_skill_harvest/Slivers/sliver_app_bar.dart';
+
+
+import 'package:app_skill_harvest/Slivers/sliver_app_bar.dart';
+
+
 
 import 'package:flutter/material.dart';
 
@@ -25,7 +30,7 @@ class ChristTech extends StatelessWidget {
         secondary: const Color.fromARGB(243, 6, 29, 232)),
         useMaterial3: true,
       ),
-      home:  const SplashScreenTask() //const SplashScreenTask(),
+      home:  const SliverApp() //const SplashScreenTask(),
     );
   }
 }

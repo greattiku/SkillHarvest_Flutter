@@ -25,130 +25,132 @@ class LearningPlan extends StatelessWidget {
     // final double screenHeight = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        SizedBox(
-          height: 250,
-          width: double.infinity,
-          child: WelcomeStack(screenWidth: screenWidth),
-        ),
-        SizedBox(
-          width: screenWidth,
-          height: 170,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 5,
-            itemBuilder: (context, index) {
-              return const PlaceCard();
-            },
+      body: SingleChildScrollView(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+            height: 250,
+            width: double.infinity,
+            child: WelcomeStack(screenWidth: screenWidth),
           ),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(left: 15, top: 10),
-          child: Text(
-            "Learning Plan",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+          SizedBox(
+            width: screenWidth,
+            height: 170,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return const PlaceCard();
+              },
+            ),
           ),
-        ),
-       Container(
-        margin: const EdgeInsets.only(left: 15,right: 15),
-        padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
-      width: screenWidth,
-      height: 120,
-      
-      decoration:  BoxDecoration(
-      //  border: const Border(bottom: BorderSide(width:2.0)),
-        boxShadow:[
-            BoxShadow(color: Colors.grey.withOpacity(0.3),
-                  spreadRadius: 1,
-                  blurRadius: 5,
-                  offset: const Offset(0, 3)),
-                  const BoxShadow(
-                  color: Colors.transparent,
-                  spreadRadius: 1,
-                  blurRadius: 5,
-                  offset: Offset(0, 3)), ],
-        color: Colors.white,borderRadius: const BorderRadius.all(Radius.circular(15))),
-         child: const Column(
-           children: [
-             CircularProgressPlan(
-              title: "Packaging Design",
-                      totalVideos: 48,
-                      coveredVideos: 30,
-                   ),
-             
-                   Gap(15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15, top: 10),
+            child: Text(
+              "Learning Plan",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            ),
+          ),
+         Container(
+          margin: const EdgeInsets.only(left: 15,right: 15),
+          padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+        width: screenWidth,
+        height: 120,
+        
+        decoration:  BoxDecoration(
+        //  border: const Border(bottom: BorderSide(width:2.0)),
+          boxShadow:[
+              BoxShadow(color: Colors.grey.withOpacity(0.3),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3)),
+                    const BoxShadow(
+                    color: Colors.transparent,
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: Offset(0, 3)), ],
+          color: Colors.white,borderRadius: const BorderRadius.all(Radius.circular(15))),
+           child: const Column(
+             children: [
                CircularProgressPlan(
-                title: "Product Design",
-                      totalVideos: 48,
-                      coveredVideos: 20                                                 
-               ),
-                      Gap(15),
+                title: "Packaging Design",
+                        totalVideos: 48,
+                        coveredVideos: 30,
+                     ),
+               
+                     Gap(15),
                  CircularProgressPlan(
-                          title: "Marketing",
-                      totalVideos: 24,
-                      coveredVideos: 19),
-           ],
+                  title: "Product Design",
+                        totalVideos: 48,
+                        coveredVideos: 20                                                 
+                 ),
+                        Gap(15),
+                   CircularProgressPlan(
+                            title: "Marketing",
+                        totalVideos: 24,
+                        coveredVideos: 19),
+             ],
+           ),
          ),
-       ),
+              
+        
+          GestureDetector(onTap: (){
+             Navigator.of(context).push(
+           MaterialPageRoute(
+              builder: (context) => const Courses()));
+          },
+            child: Container(
+              margin: const EdgeInsets.only(left: 10,right: 10,top:10),
+              width: 350,
+              height: 100,
             
-
-        GestureDetector(onTap: (){
-           Navigator.of(context).push(
-         MaterialPageRoute(
-            builder: (context) => const Courses()));
-        },
-          child: Container(
-            margin: const EdgeInsets.only(left: 10,right: 10,top:10),
-            width: 350,
-            height: 100,
-          
-            decoration: BoxDecoration(
-              boxShadow:[
-            BoxShadow(color: Colors.grey.withOpacity(0.3),
-                  spreadRadius: 1,
-                  blurRadius: 5,
-                  offset: const Offset(0, 3)),
-                  const BoxShadow(
-                  color: Colors.transparent,
-                  spreadRadius: 1,
-                  blurRadius: 5,
-                  offset: Offset(0, 3)), ],
-              color: const Color(0xFFEFE0FF),
-              borderRadius: BorderRadius.circular(15), ),
-              child:   Column(
-              //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-          
-                  Padding(
-                    padding: const EdgeInsets.only(left: 25,top: 2),
-                    child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        
-                        const Text("Courses",
-                        style: TextStyle(
-                          color: Color(0xFF440687),
-                          fontWeight: FontWeight.bold,fontSize: 20),),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10,top: 10),
-                          child: SvgPicture.asset(AppImage.womanAvatar,height: 50,),
-                        ),
-                      ],
+              decoration: BoxDecoration(
+                boxShadow:[
+              BoxShadow(color: Colors.grey.withOpacity(0.3),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3)),
+                    const BoxShadow(
+                    color: Colors.transparent,
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: Offset(0, 3)), ],
+                color: const Color(0xFFEFE0FF),
+                borderRadius: BorderRadius.circular(15), ),
+                child:   Column(
+                //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+            
+                    Padding(
+                      padding: const EdgeInsets.only(left: 25,top: 2),
+                      child: Row(
+                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          
+                          const Text("Courses",
+                          style: TextStyle(
+                            color: Color(0xFF440687),
+                            fontWeight: FontWeight.bold,fontSize: 20),),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10,top: 10),
+                            child: SvgPicture.asset(AppImage.womanAvatar,height: 50,),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text("Off-line exchange of learning experiences",
-                    style: TextStyle(color: Color(0xFF440687),),),
-                  ),
-          
-                ],
-              ),
-          
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child: Text("Off-line exchange of learning experiences",
+                      style: TextStyle(color: Color(0xFF440687),),),
+                    ),
+            
+                  ],
+                ),
+            
+            ),
           ),
-        ),
-      ]),
+        ]),
+      ),
     );
   }
 }
