@@ -1,8 +1,7 @@
-import 'dart:js_interop';
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:syncfusion_flutter_sliders/sliders.dart';
+
 
 class Sliders extends StatefulWidget {
   const Sliders({super.key});

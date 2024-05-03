@@ -20,6 +20,8 @@ dependencies:
   flutter_riverpod: ^2.3.0
   animated_text_kit: ^4.2.2
   syncfusion_flutter_sliders: ^25.1.38
+  flick_video_player: ^0.7.0
+  video_player: ^2.8.6
 
 
 dev_dependencies:

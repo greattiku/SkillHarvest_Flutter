@@ -1,61 +1,31 @@
 import 'package:app_skill_harvest/Course/course_info.dart';
+import 'package:app_skill_harvest/Course/course_json.dart';
+import 'package:app_skill_harvest/Providers/course_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CourseTracks extends StatelessWidget {
+
+class CourseTracks extends ConsumerWidget {
   const CourseTracks({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+
+  final courses = ref.watch(courseProvider);
     return Expanded(
-      child: ListView(
-        scrollDirection: Axis.vertical,
-        children: const [
-          CourseList(
-            courseName: "Product Design v1.0",
-            facilitator: "Robertson Connie",
-            price: 190,
-            time: "16 hours",
-          ),
-          Gap(10),
-          CourseList(
-            courseName: "Java Development",
-            facilitator: "Nguyen Shane",
-            price: 190,
-            time: "16 hours",
-          ),
-          Gap(10),
-          CourseList(
-            courseName: "Visual Design",
-            facilitator: "Bert Pullman",
-            price: 250,
-            time: "14 hours",
-          ),
-          Gap(10),
-          CourseList(
-            courseName: "Visual Design",
-            facilitator: "Bert Pullman",
-            price: 250,
-            time: "14 hours",
-          ),
-          Gap(10),
-          CourseList(
-            courseName: "Visual Design",
-            facilitator: "Bert Pullman",
-            price: 250,
-            time: "14 hours",
-          ),
-          Gap(10),
-          CourseList(
-            courseName: "Visual Design",
-            facilitator: "Bert Pullman",
-            price: 250,
-            time: "14 hours",
-          ),
-        ],
-      ),
+      child: ListView.builder(
+        itemCount: courses.length,
+        itemBuilder: (context, index) {
+          final Course course = courses[index];
+        return  CourseList(
+            courseName: course.courseName,
+            facilitator: course.facilitator,
+            price: course.price,
+            time: course.time,
+          );
+      },)
     );
   }
 }

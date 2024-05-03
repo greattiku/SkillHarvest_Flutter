@@ -13,7 +13,7 @@ class CourseList extends StatelessWidget {
 
   final String courseName;
   final String facilitator;
-  final int price;
+  final String price;
   final String time;
 
   @override

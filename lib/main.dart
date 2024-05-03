@@ -3,16 +3,18 @@
 // import 'package:app_skill_harvest/Slivers/sliver_app_bar.dart';
 
 
-import 'package:app_skill_harvest/Slivers/sliver_app_bar.dart';
+import 'package:app_skill_harvest/Course/product_design_course.dart';
+
 
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
 
 void main() {
-  runApp(const ChristTech());
+  runApp(const ProviderScope(child: ChristTech()));
 }
 
 class ChristTech extends StatelessWidget {
@@ -30,7 +32,7 @@ class ChristTech extends StatelessWidget {
         secondary: const Color.fromARGB(243, 6, 29, 232)),
         useMaterial3: true,
       ),
-      home:  const SliverApp() //const SplashScreenTask(),
+      home:  const ProductDesignScreen() //const SplashScreenTask(),
     );
   }
 }
