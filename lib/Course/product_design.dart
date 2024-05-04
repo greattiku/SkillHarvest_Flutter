@@ -1,5 +1,4 @@
-import 'package:app_skill_harvest/Course/course_video.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -51,12 +50,7 @@ class ProductDesign extends StatelessWidget {
            Text(courseSubTitleSubHeading,
            style: const TextStyle(color: Colors.grey),),
         
-        Gap(10),
-        const CourseVideos(
-        courseTitle: "Welcome to the course", 
-        courseNo: 01, 
-        duration: "6:10 mins",
-        ),
+       
         
         ],
       ),
